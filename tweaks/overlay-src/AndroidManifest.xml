@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tb330fu.autobrightness"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:hasCode="false"
+        android:label="TB330FU Auto Brightness" />
+
+    <!-- Static RRO targeting framework-res (android): active from first boot,
+         trusted by its /product/overlay location (no platform signature needed). -->
+    <overlay
+        android:targetPackage="android"
+        android:priority="1"
+        android:isStatic="true" />
+
+</manifest>

@@ -1,0 +1,6 @@
+id=tb330fu_notelephony
+name=TB330FU Disable Telephony
+version=v1
+versionCode=1
+author=levin
+description=Disables cellular/telephony on the WiFi-only Lenovo Tab M11 (TB330FU) GSI. Marks all android.hardware.telephony* features unavailable, so SIM/mobile/calling UI is removed and com.android.phone stops crash-looping. Reboot after install.

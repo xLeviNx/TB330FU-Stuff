@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Master gate: the dump showed mAutoBrightnessAvailable=false. Turn it on. -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <!-- Headphone jack: WiredAccessoryManager must use the input-device (EV_SW)
+         path, not the legacy /sys/class/switch/h2w (which doesn't exist here).
+         Default is false on GSI, so the detected jack never routes. -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- Lux thresholds between brightness buckets.
+         Length must be (backlight values length - 1).
+         10 backlight buckets => 9 lux thresholds. -->
+    <integer-array name="config_autoBrightnessLevels">
+        <item>8</item>
+        <item>20</item>
+        <item>45</item>
+        <item>90</item>
+        <item>180</item>
+        <item>360</item>
+        <item>700</item>
+        <item>1300</item>
+        <item>2500</item>
+    </integer-array>
+
+    <!-- Backlight (0-255) per bucket. First = darkest room, last = bright sunlight.
+         Min ~10/255 matches the panel's mBacklightMinimum (0.0354). -->
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+        <item>150</item>
+        <item>185</item>
+        <item>215</item>
+        <item>255</item>
+    </integer-array>
+
+</resources>
